@@ -85,6 +85,7 @@ int main()
     // ------------------------------------------------------------------
     
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_FRAMEBUFFER_SRGB);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);//运行时隐藏鼠标光标
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
