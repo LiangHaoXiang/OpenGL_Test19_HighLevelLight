@@ -37,5 +37,8 @@ void main()
         spec = pow(max(dot(viewDir, reflectDir), 0.0), 8.0);
     }
     vec3 specular = vec3(0.3) * spec; // assuming bright white light color
-    FragColor = vec4(ambient + diffuse + specular, 1.0);
+//    FragColor = vec4(ambient + diffuse + specular, 1.0);
+    vec3 res = ambient + diffuse + specular;
+    float gamma = 2.2;
+    FragColor = vec4(pow(res.rgb, vec3(1.0 / gamma)), 1.0);
 }
